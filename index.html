@@ -198,14 +198,14 @@
                             const walkData = snapshot.val();
                             tr.innerHTML = `
                                 <td class="px-6 py-4 font-semibold text-blue-600">${walkId}</td>
-                                <td class="px-6 py-4 font-medium text-gray-900">${walkData.routeName || '—'}</td>
-                                <td class="px-6 py-4">${walkData.routeDistance || '—'}</td>
+                                <td class="px-6 py-4 font-medium text-gray-900">${walkData.Route_Name || '—'}</td>
+                                <td class="px-6 py-4">${walkData.Route_Distance || '—'}</td>
                                 <td class="px-6 py-4">
                                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getDifficultyStyle(walkData.difficulty)}">
-                                        ${walkData.routeGrade || 'Unknown'}
+                                        ${walkData.Grade || 'Unknown'}
                                     </span>
                                 </td>
-                                <td class="px-6 py-4 text-gray-500">${walkData.routeTime || '—'}</td>
+                                <td class="px-6 py-4 text-gray-500">${walkData.Total_Time || '—'}</td>
                             `;
                             loadedCount++;
                         } else {
