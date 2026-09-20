@@ -79,10 +79,10 @@
                         <table class="min-w-full divide-y divide-gray-200 text-left">
                             <thead class="bg-gray-50 text-xs font-semibold text-gray-500 uppercase tracking-wider">
                                 <tr>
-                                    <th class="px-6 py-3">Walk ID</th>
-                                    <th class="px-6 py-3">Name</th>
+                                    <th class="px-6 py-3">Route ID</th>
+                                    <th class="px-6 py-3">Route Name</th>
                                     <th class="px-6 py-3">Distance</th>
-                                    <th class="px-6 py-3">Difficulty</th>
+                                    <th class="px-6 py-3">Grade</th>
                                     <th class="px-6 py-3">Duration</th>
                                 </tr>
                             </thead>
@@ -198,14 +198,14 @@
                             const walkData = snapshot.val();
                             tr.innerHTML = `
                                 <td class="px-6 py-4 font-semibold text-blue-600">${walkId}</td>
-                                <td class="px-6 py-4 font-medium text-gray-900">${walkData.name || '—'}</td>
-                                <td class="px-6 py-4">${walkData.distance || '—'}</td>
+                                <td class="px-6 py-4 font-medium text-gray-900">${walkData.routeName || '—'}</td>
+                                <td class="px-6 py-4">${walkData.routeDistance || '—'}</td>
                                 <td class="px-6 py-4">
                                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getDifficultyStyle(walkData.difficulty)}">
-                                        ${walkData.difficulty || 'Unknown'}
+                                        ${walkData.routeGrade || 'Unknown'}
                                     </span>
                                 </td>
-                                <td class="px-6 py-4 text-gray-500">${walkData.duration || '—'}</td>
+                                <td class="px-6 py-4 text-gray-500">${walkData.routeTime || '—'}</td>
                             `;
                             loadedCount++;
                         } else {
